@@ -53,7 +53,7 @@ body {
   @include flex-center();
   background-color: #faeded;
   width: $width_full;
-  height: 450px;
+  height: 400px;
 }
 
 .contact .row {
@@ -61,11 +61,15 @@ body {
   height: 90%;
 }
 
+.contact .row .col .row {
+  height: 30px;
+}
+
 // EXPERIENCE
 .experience {
   @include flex-center();
   width: $width_full;
-  height: 800px;
+  height: 830px;
 }
 
 .experience .container {
