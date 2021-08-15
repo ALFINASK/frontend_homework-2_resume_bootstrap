@@ -1,0 +1,147 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-center-top {
+  display: flex;
+  justify-content: center;
+}
+
+$width_full: 100%;
+$width_content: 70%;
+
+body {
+  width: $width_full;
+  height: auto;
+}
+
+// PROFILE
+.profile {
+  @include flex-center;
+  width: $width_full;
+  height: 500px;
+}
+
+.profile .row {
+  @include flex-center;
+  width: $width_content;
+}
+
+.profile .row .col-8 {
+  text-align: justify;
+}
+
+.profile .row .col-8 h1 {
+  font-family: Arial;
+  font-weight: 700;
+}
+
+.profile .row .col-4 {
+  @include flex-center;
+}
+
+.profile .row .col-4 img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+// CONTACT
+.contact {
+  @include flex-center();
+  background-color: #faeded;
+  width: $width_full;
+  height: 450px;
+}
+
+.contact .row {
+  width: $width_content;
+  height: 90%;
+}
+
+// EXPERIENCE
+.experience {
+  @include flex-center();
+  width: $width_full;
+  height: 800px;
+}
+
+.experience .container {
+  width: $width_content;
+  height: 90%;
+}
+
+.experience .container .row {
+  @include flex-center();
+  height: 220px;
+}
+
+.experience .container .row .col-4 img {
+  width: 260px;
+  height: 180px;
+}
+
+.experience .container .row .col-8 .year {
+  height: 40px;
+}
+
+.experience .container .row .col-8 .year p {
+  color: rgb(174, 174, 174);
+}
+
+.experience .container .row .col-8 .year span {
+  padding: 2px 10px;
+  background-color: #621338;
+  color: white;
+  border-radius: 25px;
+  margin-right: 20px;
+}
+
+// FOOTER
+.footer {
+  @include flex-center;
+  width: $width_full;
+  height: 130px;
+}
+
+.footer .container {
+  width: 250px;
+  height: 100px;
+}
+
+.footer .container .container-icon span {
+  cursor: pointer;
+}
+
+.footer .container .container-icon a {
+  color: black;
+}
+
+.footer .container .container-icon a:hover {
+  color: rgb(65, 65, 65);
+}
+
+.footer .container .container-copyright span {
+  font-size: 11px;
+  margin-top: 8px;
+}
+
+h3 {
+  color: #621338;
+
+  font-family: "Courier New", Courier, monospace;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 14px;
+  margin-bottom: 0;
+}
